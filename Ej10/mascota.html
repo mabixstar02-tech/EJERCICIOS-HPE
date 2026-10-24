@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Adopcion de Mascotas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <h1>Centro de Adopcion de Mascotas</h1>
+
+    <h2>Registrar Mascota</h2>
+
+    <form>
+        <input type="text" placeholder="Identificador" id="identificador">
+        <input type="text" placeholder="Nombre" id="nombre">
+        <input type="number" placeholder="Edad" id="edad">
+
+        <select id="tipo">
+            <option value="Perro">Perro</option>
+            <option value="Gato">Gato</option>
+        </select>
+    </form>
+
+    <button onclick="registrarMascota()">Aceptar</button>
+    <button onclick="mostrarMascotas()">Mostrar Mascotas</button>
+
+    <h2>Lista de Mascotas</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Identificador</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Tipo</th>
+                <th>Estado</th>
+                <th>Cuidados</th>
+            </tr>
+        </thead>
+        <tbody id="tablaMascotas"></tbody>
+    </table>
+
+    <h2>Registrar Solicitud</h2>
+
+    <form>
+        <input type="text" placeholder="Numero de solicitud" id="numeroSolicitud">
+        <input type="text" placeholder="Identificador de mascota" id="mascotaSolicitud">
+        <input type="text" placeholder="Nombre de la persona" id="persona">
+    </form>
+
+    <button onclick="registrarSolicitud()">Aceptar Solicitud</button>
+
+    <h2>Aprobar Adopcion</h2>
+
+    <input type="text" placeholder="Numero de solicitud" id="aprobarSolicitud">
+
+    <button onclick="aprobarAdopcion()">Aprobar</button>
+    <button onclick="mostrarSolicitudes()">Mostrar Solicitudes</button>
+
+    <h2>Lista de Solicitudes</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Mascota</th>
+                <th>Persona</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody id="tablaSolicitudes"></tbody>
+    </table>
+
+    <script src="mascotas.js"></script>
+
+</body>
+</html>
