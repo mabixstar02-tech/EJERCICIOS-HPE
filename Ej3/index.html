@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de transporte</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Sistema de transporte</h1>
+
+    <h2>Registrar vehículo</h2>
+
+    Identificador o placa:
+    <input type="text" id="identificador">
+    <br><br>
+
+    Capacidad:
+    <input type="number" id="capacidad">
+    <br><br>
+
+    Tipo de vehículo:
+    <select id="tipo">
+        <option value="Auto">Automóvil</option>
+        <option value="Moto">Motocicleta</option>
+        <option value="Bicicleta">Bicicleta</option>
+    </select>
+    <br><br>
+
+    <button onclick="registrarVehiculo()">Registrar vehículo</button>
+
+    <h2>Registrar viaje</h2>
+
+    Identificador del vehículo:
+    <input type="text" id="vehiculoViaje">
+    <br><br>
+
+    Distancia en kilómetros:
+    <input type="number" id="distancia">
+    <br><br>
+
+    Costo por kilómetro:
+    <input type="number" id="costo">
+    <br><br>
+
+    <button onclick="registrarViaje()">Registrar viaje</button>
+
+    <p id="mensaje"></p>
+
+    <h2>Vehículos registrados</h2>
+
+    <table>
+        <tr>
+            <th>Identificador</th>
+            <th>Tipo</th>
+            <th>Capacidad</th>
+            <th>Estado</th>
+        </tr>
+        <tbody id="tablaVehiculos"></tbody>
+    </table>
+
+    <h2>Viajes registrados</h2>
+
+    <table>
+        <tr>
+            <th>Vehículo</th>
+            <th>Distancia</th>
+            <th>Costo total</th>
+        </tr>
+        <tbody id="tablaViajes"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

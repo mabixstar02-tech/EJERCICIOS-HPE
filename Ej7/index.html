@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedidos de un restaurante</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <h1>Pedidos de un restaurante</h1>
+
+    <h2>Registrar producto del menú</h2>
+
+    <label>Nombre:</label>
+    <input type="text" id="nombre">
+    <br><br>
+
+    <label>Precio:</label>
+    <input type="number" id="precio">
+    <br><br>
+
+    <label>Tipo de producto:</label>
+    <select id="tipo">
+        <option value="Plato">Plato preparado</option>
+        <option value="Bebida">Bebida</option>
+    </select>
+    <br><br>
+    
+    <label>Disponibilidad:</label>
+    <select id="disponibilidad">
+        <option value="Disponible">Disponible</option>
+        <option value="Agotado">Agotado</option>
+    </select>
+    <br><br>
+
+    <button onclick="registrarProducto()">Registrar producto</button>
+
+    <h2>Agregar producto al pedido</h2>
+
+    <label>Mesa:</label>
+    <input type="number" id="mesa">
+    <br><br>
+
+    <label>Nombre del producto:</label>
+    <input type="text" id="productoPedido">
+    <br><br>
+
+    <label>Cantidad:</label>
+    <input type="number" id="cantidad">
+    <br><br>
+
+    <label>Adicional:</label>
+    <select id="adicional">
+        <option value="0">Sin adicional</option>
+        <option value="2000">Queso extra (+$2.000)</option>
+        <option value="3000">Porción extra (+$3.000)</option>
+    </select>
+    <br><br>
+
+    <button onclick="agregarPedido()">Agregar al pedido</button>
+
+    <p id="mensaje"></p>
+
+    <h2>Menú del restaurante</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Precio</th>
+                <th>Disponibilidad</th>
+            </tr>
+        </thead>
+        <tbody id="tablaMenu"></tbody>
+    </table>
+
+    <h2>Pedido de la mesa</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Mesa</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Adicional por unidad</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="tablaPedidos"></tbody>
+    </table>
+
+    <h2>Total por mesa</h2>
+
+    <label>Número de mesa:</label>
+    <input type="number" id="mesaConsultar">
+    <button onclick="calcularTotalMesa()">Calcular total</button>
+
+    <p id="totalMesa"></p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

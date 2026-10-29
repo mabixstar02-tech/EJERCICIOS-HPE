@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca y préstamos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <h1>Biblioteca y préstamos</h1>
+
+    <h2>Registrar recurso</h2>
+
+    <label>Código:</label>
+    <input type="text" id="codigo">
+    <br><br>
+
+    <label>Título:</label>
+    <input type="text" id="titulo">
+    <br><br>
+
+    <label>Tipo de recurso:</label>
+    <select id="tipo">
+        <option value="Impreso">Libro impreso</option>
+        <option value="Digital">Recurso digital</option>
+    </select>
+    <br><br>
+
+    <button onclick="registrarRecurso()">Registrar recurso</button>
+
+    <h2>Buscar recurso</h2>
+
+    <label>Código del recurso:</label>
+    <input type="text" id="codigoBuscar">
+    <button onclick="buscarRecurso()">Buscar</button>
+
+    <h2>Préstamo y devolución</h2>
+
+    <label>Código del recurso:</label>
+    <input type="text" id="codigoPrestamo">
+    <br><br>
+
+    <button onclick="prestarRecurso()">Prestar recurso</button>
+    <button onclick="devolverRecurso()">Devolver recurso</button>
+
+    <p id="mensaje"></p>
+
+    <h2>Listado de recursos</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Título</th>
+                <th>Tipo</th>
+                <th>Disponibilidad</th>
+                <th>Plazo de préstamo</th>
+            </tr>
+        </thead>
+        <tbody id="tablaRecursos"></tbody>
+    </table>
+
+    <h2>Listado de préstamos</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Título</th>
+                <th>Plazo en días</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody id="tablaPrestamos"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
